@@ -1,0 +1,90 @@
+/*存储通用样式*/
+html{
+	margin: 0; border: 0; padding: 0;width: 100%;min-width: 1000px;height: 100%;min-height: 600px;}
+body{
+	margin: 0; border: 0; padding: 0;width: 100%;height: 100%;}
+/* 滚动条样式定义
+::-webkit-scrollbar 滚动条整体部分
+::-webkit-scrollbar-thumb  滚动条里面的小方块（即滚动条滑块），能向上向下移动（或横向滚动条可往左往右移动）
+::-webkit-scrollbar-track  滚动条的轨道（对应上图滚动条凹槽，里面装有Thumb，即滚动条滑块）
+::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置
+::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
+::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分
+::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件
+*/
+/*定义滚动条样式（高宽及背景）*/ 
+::-webkit-scrollbar { 
+    width: 8px;   /* 滚动条宽度， width：对应竖滚动条的宽度  height：对应横滚动条的高度*/
+    height: 8px;
+    background: #ccc;
+} 
+/*定义滚动条轨道（凹槽）样式*/ 
+::-webkit-scrollbar-track { 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);    /* 较少使用 */
+    border-radius: 43px; 
+} 
+/*定义滑块 样式*/ 
+::-webkit-scrollbar-thumb { 
+    border-radius: 4px; 
+    height: 100px;    /* 滚动条滑块长度 */
+    background-color: #007acc;
+}
+
+/*子元素对齐
+align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit;
+stretch：元素被拉伸以适应容器
+center：元素位于容器的中心
+flex-start ：元素位于容器的开头
+flex-end：元素位于容器的结尾
+*/
+.centerDiplay{ /*居中*/
+	display: flex; justify-content: center; align-items: center; }
+.centerDiplay-cb{ /*水平居中，垂直底部*/
+	display: flex; justify-content: center; align-items: flex-end; }
+.centerDiplay-ct{ /*水平居中，垂直顶部*/
+	display: flex; justify-content: center; align-items: flex-start; }
+.centerDiplay-sc{ /*水平左对齐，垂直居中*/
+	display: flex; justify-content: flex-start; align-items: center; }
+.centerDiplay-st{ /*水平左对齐，垂直顶部*/
+	display: flex; justify-content: flex-start; align-items: flex-start; }
+.centerDiplay-et{ /*水平右对齐，垂直顶部*/
+	display: flex; justify-content: flex-end; align-items: flex-start; }
+.centerDiplay-ec{ /*水平右对齐，垂直居中*/
+	display: flex; justify-content: flex-end; align-items: center; }
+
+.borderBnone{ /*边框计入百分比大小内*/
+	box-sizing:border-box;	
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+.logo-c1{width: 208px;height: 50px;}/*导航条通用样式*/
+
+/*定义字体大小*/
+.fontSizeMyself1{font-size: 14px; color: #555;}
+.fontSizeMyself2{font-size: 18px; color: #eee;}
+.fontSizeMyself3{font-size: 12px; color: #555;}
+.fontSizeMyself4{font-size: 12px; color: #888;}
+.fontSizeMyself5{font-size: 14px; color: #777;}
+.fontSizeMyself6{font-size: 15px; color: #222;}
+.fontSizeMyself7{font-size: 12px; color: #eee;}
+.fontSizeMyself8{font-size: 12px; color: #fff;}
+.fontSizeMyself9{font-size: 20px; color: #333;font-weight:800;}
+.fontSizeMyselfa{font-size: 15px; color: #666;}
+.fontSizeMyselfb{font-size: 16px; color: #eee;}
+.fontSizeMyselfc{font-size: 16px; color: #555;}
+.fontSizeMyselfd{font-size: 13px; color: #eee;}
+.fontSizeMyselfe{font-size: 14px; color: #fff;}
+.fontSizeMyselff{font-size: 20px; color: #333;}
+.bookNameMyself1{font-family:"KaiTi"; font-size: 24px;color: #000;}
+.bookNameMyself2{font-family:"KaiTi"; font-size: 16px;color: #333;}
+
+.widthAutoC1{display:inline-block; *display:inline; *zoom:1;}/*宽度自适应*/
+.nowrapAuto{white-space:nowrap;} /*禁止自动换行*/
+
+pre {margin:0;font-family: "微软雅黑";white-space: pre-wrap;word-wrap: break-word;}
+
+.overflow-c1{/*超出部分。。。*/
+	overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
+.overflow-c2{/*超出部分。。。*/
+	overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;}
