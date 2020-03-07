@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>千年书馆</title>
+	<!-- 引入页面样式文件 -->
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/com.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/msg.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/index/css/appReadPage.css">
+	<!-- 引入VUE -->
+	<script type="text/javascript" src="__ROOT__/static/common/js/vue-v2.6.10/vue.js"></script>
+	<!-- 引入自定义VUE组件 -->
+	<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.component.js"></script>
+	<!-- 表单提交相关js -->
+	<script src="__ROOT__/static/common/js/axios-v0.12.0-min.js"></script>
+	<script src="__ROOT__/static/common/js/lodash-v4.13.1-min.js"></script>
+	<!--Jquery-->
+	<script src="__ROOT__/static/common/js/jquery-v1.12.4/jquery.js"></script>
+	<!-- 通用 JS -->
+	<script src="__ROOT__/static/common/js/com.js">	</script>
+	<!-- 定义全局变量 -->
+	<script type="text/javascript">
+		var chapterInformation = {$chapter};
+	</script>
+</head>
+<body>
+<!-- VUE实例 -->
+<div id="appReadPage">
+	<!-- 主窗口区域 -->
+	<div id="arpMain">
+		<!-- 顶部导航 -->
+		<div id="arpmTopPlace" class="adimTop centerDiplay">
+			<!-- 外框居中 -->
+			<div class="adimtMiddle">
+				<!-- 文字 -->
+				<div class="adimtmTxt centerDiplay-sc"><span class="fontSizeMyself2">千年书馆网</span></div>
+				<!-- 搜索 -->
+				<div class="adimtmSearch">
+					<input class="adimtmsInput" type="text" name="">
+					<img class="adimtmsImg" src="__ROOT__/static/common/img/rightGo.png">
+				</div>
+				<div class="pageNowPlace centerDiplay"><span class="fontSizeMyselfd">{chapterInfo[0].bookname}}&nbsp;>&nbsp;第{chapterInfo[0].num}}卷&nbsp;>&nbsp;第{chapterInfo[0].num2}}回</span></div>
+				<div class="adimtmButton centerDiplay"><span class="fontSizeMyself1">意见</span></div>
+				<div class="adimtmButton centerDiplay"><span class="fontSizeMyself1">纠错</span></div>
+				<div class="adimtmButton centerDiplay"><span class="fontSizeMyself1">投稿</span></div>
+			</div>
+		</div>
+		<!-- 显示内容 -->
+		<div id="arpmMiddle" class="centerDiplay-ct">
+			<!-- 左侧显示文字 -->
+			<div id="arpmmLeft">
+				<!-- 标题 -->
+				<div id="arpmmlTittle" class="centerDiplay-sc"><span class="fontSizeMyself9">{chapterInfo[0].num2}}.&nbsp;&nbsp;{chapterInfo[0].name}}</span></div>
+				<!-- 内容 -->
+				<div id="arpmmlTxt" class="fontSizeMyself1"></div>
+				<!-- 切换 -->
+				<div id="arpmmNext" class="centerDiplay">
+					<div style="height:40px;background-color:rgb(217,242,244);border-radius:6px;border:1px solid #ccc;"  class="centerDiplay"><span class="fontSizeMyselfc">&nbsp;&nbsp;&nbsp;下一章&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;目录&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;上一章&nbsp;&nbsp;&nbsp;</span></div>
+				</div>
+			</div>
+			<!-- 右侧显示评论 -->
+			<div id="arpmmRight">
+				<div id="arpmmrTalk" class="borderBnone">评论区</div>
+			</div>
+		</div>
+		<!-- 底部章节切换 -->
+		<!-- <div id="arpmBottom" class="centerDiplay">
+		</div> -->
+	</div>
+	<!-- 弹窗页面 -->
+	<div class="infoMsg" v-bind:style="{ display: isInfoMsgOn}">
+		弹窗区域
+	</div>
+</div>
+</body>
+<!-- 在页面加载完成之后，引入VUE实例文件 -->
+<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.appReadPage.js"></script>
+</html>

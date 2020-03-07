@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>千年书馆</title>
+	<!-- 引入页面样式文件 -->
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/com.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/msg.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/index/css/appIndex.css">
+	<!-- 引入VUE -->
+	<script type="text/javascript" src="__ROOT__/static/common/js/vue-v2.6.10/vue.js"></script>
+	<!-- 引入自定义VUE组件 -->
+	<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.component.js"></script>
+	<!-- 表单提交相关js -->
+	<script src="__ROOT__/static/common/js/axios-v0.12.0-min.js"></script>
+	<script src="__ROOT__/static/common/js/lodash-v4.13.1-min.js"></script>
+	<!--Jquery-->
+	<script src="__ROOT__/static/common/js/jquery-v1.12.4/jquery.js"></script>
+	<!-- 通用 JS -->
+	<script src="__ROOT__/static/common/js/com.js"></script>
+</head>
+<body>
+<!-- 页面区域 -->
+<div id="appIndex"  v-bind:style="{ background: 'url(__ROOT__/static/common/img/'+fisrPageImg+')' }">
+	<!-- 主显示区 -->
+	<div id="appIndexMain">
+		<!-- 导航条 -->
+		<div class="aim-c1" id="aimTop">
+			<!-- logo显示 -->
+			<div class="logo-p1 centerDiplay-sc">
+				<img class="logo-c1" src="__ROOT__/static/common/img/1000nsLogo.png"  alt="Logo" />
+			</div>
+			<div class="logo-t1 centerDiplay"><div class="logo-t1-c1 centerDiplay"><span class="fontSizeMyself1">意见</span></div></div>
+			<div class="logo-t1 centerDiplay"><div class="logo-t1-c1 centerDiplay"><span class="fontSizeMyself1">纠错</span></div></div>
+			<div class="logo-t1 centerDiplay"><div class="logo-t1-c1 centerDiplay"><span class="fontSizeMyself1">投稿</span></div></div>
+		</div>
+		<!-- 中间区域 -->
+		<div class="aim-c1 centerDiplay" id="aimMiddle">
+			<div id="aimmOut">
+				<div id="aimmoTop">
+					<div v-for="(item, index) in ifWebOn" class="aimmoTop-c1 centerDiplay-sc">
+						<div class="aimmotBookborder centerDiplay"><span class="fontSizeMyself7">{{item}}</span></div>
+						<div class="aimmotBookborderInside centerDiplay">{{firstWebInfos[index]}}</div>			
+					</div>
+				</div>
+				<div id="aimmoMiddle" class="centerDiplay-ct">
+					<div id="aimmomSearch">
+						<input id="aimmomsInput" class="borderBnone fontSizeMyselff" type="text" name="mSearch" v-model="inputIfo">
+						<div v-on:click="searchBookinf" id="aimmomsButton" class="borderBnone centerDiplay"><span class="fontSizeMyself2">搜索</span></div>
+					</div>
+				</div>
+				<div id="aimmoBottom" class="centerDiplay-ct">
+					<div id="aimmobDisplay">
+						<div id="aimmobLeft">
+							<div class="aimmoblItem" v-for="item in bookHots" v-bind:style="{ background:'url(__ROOT__/static/common/img/'+cCover+') no-repeat', backgroundSize: '100% 100%' }">
+								<div class='reBookName'><span class="bookNameMyself1">{{item.name}}</span></div>
+								<div class='reBookAuthorName'><span class="bookNameMyself2">{{item.author}}著</span></div>
+							</div>
+						</div>
+						<div id="aimmobRight" class="centerDiplay">
+							<div id="aimmobrm">更多</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部导航条 -->
+		<div class="aim-c1 centerDiplay" id="aimBottom">
+			<span class="fontSizeMyselfe">联系我们:enqiangjing@163.com</span>
+		</div>
+	</div>
+	<!-- 弹窗页面 -->
+	<div class="infoMsg" v-bind:style="{ display: isInfoMsgOn}">
+		弹窗区域
+	</div>
+</div>
+</body>
+<!-- 在页面加载完成之后，引入VUE实例文件 -->
+<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.appIndex.js"></script>
+</html
