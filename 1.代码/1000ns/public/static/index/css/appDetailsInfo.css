@@ -1,0 +1,252 @@
+#appDetailsInfo{/*页面最外层样式*/
+	position: relative;
+	top: 0; left: 0; margin: 0; border: 0; padding: 0;
+	width: 100%;
+	height: 100%;
+}
+#adiMain{/*主画板*/
+	position: absolute;
+	top: 0; left: 0; margin: 0; border: 0; padding: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+}
+
+.adimTop{/*导航条*/
+	position: fixed;
+	top: 0;left: 0;margin: 0;border: 0;padding: 0;
+	height: 50px;
+	width: 100%;
+	min-width: 1000px;
+	background-color: rgb(62, 61, 67);
+	z-index: 501;
+}
+.adimtMiddle{
+	height: 50px;
+	width: 80%;
+	min-width: 990px;
+}
+.adimtmTxt{
+	position: relative;
+	top: 0;left: 0;margin: 0;border: 0;padding: 0;
+	float: left;
+	width: 120px;
+	height: 50px;
+}
+.adimtmSearch{
+	position: relative;
+	top: 0;left: 0;margin: 0;border: 0;padding: 0;
+	float: left;
+	width: 250px;
+	height: 50px;
+}
+.adimtmsInput{
+	position: absolute;
+	width: 210px;
+	height: 34px;
+	border-radius: 10px;
+	top: 8px; left: 0; margin: 0; border: 0;
+	padding-left: 8px;
+	padding-right: 30px;
+}
+.adimtmsImg{
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	top: 12px;
+	right: 4px;
+}
+.adimtmButton{
+	position: relative;
+	float: right;
+	top: 11px; left: 0; margin: 0; border: 0;
+	margin-left: 10px;
+	width: 50px;
+	height: 28px;
+	background-color: #eee;
+	border-radius: 10px;
+}
+.adimMiddle{/*中间区域*/
+	position: relative;
+	top: 50px;left: 0;margin: 0;border: 0;padding: 0;
+	width: 100%;
+}
+.adimmTop{
+	position: absolute;
+	top: 0;left: 0;
+	width: 100%;
+	min-width: 990px;
+	height: 260px;
+	z-index: 100;
+	overflow: hidden;
+}
+#adimmtImg{
+	width: 100%;
+	height: 100%;
+}
+.adimmMiddle{/*显示书籍信息*/
+	position: relative;
+	top: 0;left: 0;margin: 0;border: 0;padding: 0;
+	width: 80%;
+	min-width: 990px;
+	z-index: 500;
+}
+.adimmmPlace{/*显示位置信息*/
+	position: relative;
+	top: 0;left: 0;margin: 15px 0 0 0;border: 0;padding: 0 10px 0 10px;
+	height: 28px;
+	line-height: 24px;
+	background-color: rgba(5, 5, 5, 0.35);
+	z-index: 500;
+	box-shadow: 0 0 1px #666;
+	border-radius: 4px;
+}
+.adimmmTop{/*书籍介绍*/
+	position: relative;
+	top: 0px;left: 0;margin: 70px 0 0 0;border: 0;padding: 0;
+	width: 100%;
+	height: 220px;
+	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 -1px 2px #aaa;
+	border-radius: 2px;
+	/*background-color: #ddd;*/
+}
+.adimmmtImg{
+	position: absolute;
+	top: 10px;left: 10px;margin: 0;border: 0;padding: 0;
+	width: 154px;
+	height: 200px;
+	box-shadow: 0 0 1px #666;
+	border-radius: 2px;
+}
+.adimmmtName{
+	position: absolute;
+	top: 10px;left: 179px;margin: 0;border: 0;padding: 0;
+	/*width: 226px;*/
+	height: 35px;
+	overflow: hidden;
+}
+.adimmmtFlg{
+	position: absolute;
+	top: 45px;left: 179px;margin: 0;border: 0;padding: 0;
+	/*width: 226px;*/
+	height: 35px;
+}
+.adimmmtfNum{
+	position: relative;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 10px;
+	float: left;
+	height: 26px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-radius: 15px;
+}
+.adimmmtBbb{
+	position: absolute;
+	top: 80px;left: 179px;margin: 0;border: 0;padding: 0;
+	width: 60%;
+	height: 35px;
+	overflow: hidden;
+}
+.adimmmtCcc{
+	position: absolute;
+	top: 115px;left: 179px;margin: 0;border: 0;padding: 0;
+	width: 60%;
+	height: 35px;
+	overflow: hidden;
+}
+.adimmmtButton{
+	position: absolute;
+	top: 160px;left: 179px;margin: 0;border: 0;padding: 0;
+	/*width: 226px;*/
+	height: 50px;
+}
+.adimmmtbNum{
+	position: relative;
+	margin: 0 10px 0 0;
+	padding: 0 10px 0 10px;
+	float: left;
+	height: 40px;
+	background-color: #fff;
+	/*border: 1px solid #aaa;*/
+	box-shadow: 0 0 2px #aaa;
+	border-radius: 2px;
+}
+.adimmmMiddle{
+	position: relative;
+	top: 0px;left: 0;margin: 30px 0 0 0;border: 0;padding: 0;
+	width: 100%;
+	box-shadow: 0 0 1px #ccc;
+	border-radius: 2px;
+}
+.adimmmmTop{
+	position: relative;
+	top: 0px;left: 0.75%;margin: 0;border: 0;padding: 0;
+	width: 98.5%;
+	height: 50px;
+	border-bottom: 1px solid #eee;
+}
+.adimmmmtButton{
+	position: relative;
+	margin: 0 10px 0 0;
+	padding: 0 15px 0 15px;
+	float: left;
+	height: 47px;
+	background-color: #fff;
+	border-bottom: 3px solid #fff;
+}
+.adimmmmtButton:hover{
+	color: #ed4259;
+	border-bottom: 3px solid #ed4259;
+	cursor: pointer;
+}
+.book_zjml{
+	position: relative;
+	top: 0px;left: 0;margin: 0;border: 0;padding: 0;
+	width: 100%;
+}
+.bool_zjml_jm{
+	position: relative;
+	float: left;
+	top: 0px;left: 0.75%;margin: 20px 0 0 0;border: 0;padding: 0;
+	width: 98.5%;
+	height: 35px;
+	border-bottom: 1px dashed #ddd;
+}
+.book_zjml_item{
+	position: relative;
+	float: left;
+	margin-top: 10px;
+	margin-right: 0.75%;
+	margin-bottom: 0;
+	margin-left: 0.75%;
+	width: 23.5%;
+	height: 35px;
+	border: 1px dashed #ddd;
+	border-radius: 10px;
+}
+.book_zjml_item_xh{
+	position: relative;
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+.book_zjml_item_zm{
+	position: relative;
+	float: left;
+	width: 80%;
+	height: 100%;
+}
+.book_zjml_item_zm:hover{
+	cursor: pointer;
+	background-color: #eee;
+}
+
+.adimBottom{/*底部导航*/
+	position: relative;
+	top: 70px;left: 0;margin: 0;border: 0;padding: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #eee;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>内容管理</title>
+    <!-- 引入页面样式文件 -->
+    <link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/com.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/msg.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/static/admin/css/appAdminPage.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/static/common/js/vue-component/tabAdmin.css">
+	<!-- 引入VUE -->
+	<script type="text/javascript" src="__ROOT__/static/common/js/vue-v2.6.10/vue.js"></script>
+	<!-- 引入自定义VUE组件 -->
+	<script type="text/javascript" src="__ROOT__/static/common/js/vue-component/tabAdmin.js"></script>
+	<!-- 表单提交相关js -->
+	<script src="__ROOT__/static/common/js/axios-v0.12.0-min.js"></script>
+	<script src="__ROOT__/static/common/js/lodash-v4.13.1-min.js"></script>
+    <!--Jquery-->
+    <script src="__ROOT__/static/common/js/jquery-v1.12.4/jquery.js"></script>
+    <!-- 通用 JS -->
+    <script src="__ROOT__/static/common/js/com.js"></script>
+    <!-- 定义全局变量 -->
+    <script type="text/javascript">
+        var userIfo = {$userIfo}; //定义全局标量，写入书籍ID
+    </script>
+</head>
+<body>
+<div id="AdminPage">
+    <!-- 按钮单击，currentTab的值发生变化，计算属性currentTabComponent根据currentTab切换页签 -->
+    <!-- == 用于比较、判断两者相等，比较时可自动换数据类型 -->
+    <!-- === 用于（严格）比较、判断两者（严格）相等，不会进行自动转换，要求进行比较的操作数必须类型一致，不一致时返回flase -->
+    <div id="apLeft">
+        <div id="aplTop">
+            <div class="apltImg centerDiplay"><img v-bind:src="'__ROOT__/static/common/img/userListImg/'+userIfos.user_img"></div>
+            <div class="apltTxt centerDiplay"><span class="fontSizeMyselfe">Hi，{{userIfos.simple_name}}</span></div>
+        </div>
+        <button v-for="tab in tabs" v-bind:key="tab.id" v-bind:class="['tab-button',{bnSelect:currentTab === tab.id}]" v-on:click="currentTab = tab.id">
+            <span class="fontSizeMyselfe">{{ tab.name }}</span>
+        </button>
+    </div>
+    <div id="apRight">
+        <!-- <keep-alive>包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们 -->
+        <keep-alive>
+            <component v-bind:is="currentTabComponent" class="adTab"></component>
+        </keep-alive>
+    </div>
+</div>
+</body>
+<!-- 引入VUE实例文件，要在页面加载完成之后 -->
+<script type="text/javascript" src="__ROOT__/static/admin/js/appAdminPage.js">
+</script>
+</html>
