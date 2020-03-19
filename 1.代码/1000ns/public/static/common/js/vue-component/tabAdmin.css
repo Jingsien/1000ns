@@ -1,0 +1,45 @@
+/*书籍新增组件*/
+.tnbTopLine{position: relative;width: 97%;margin-left: 1.5%;height: 65px;}
+.tnbSelect{position: relative;left: 0;top: 0;margin: 0;border: 0;padding: 0;
+	height: 35px;width: 17.5%;border-radius:4px;border:1px solid #ccc;}
+.tnbSelect option{border: 0;background-color: #f8f8f8;}
+.tnbtTxt{position: relative;left: 0;top: 0;margin: 0;border: 0;padding: 0;
+	height: 35px;width: 14%;border-radius:4px;border:1px dashed #ccc; background-color: #fff;margin-right: 0.5%;}
+.tnbItemBox{position: relative;width: 97%;margin-left: 1.5%;}
+.tnbItem{position: relative;left: 0;top: 0;margin: 0;border: 0;padding: 0;float: left;width:32%;margin-right: 2%;margin-bottom: 15px;}
+.tnbItem2{position: relative;left: 0;top: 0;margin: 0;border: 0;padding: 0;float: left;width:100%;}
+.tnbItem3{margin-right: 0;}
+.tnbTxtname{position: relative;left: 0;top: 0;margin: 0;border: 1px dashed #aaa;padding: 0;float: left;
+	height: 35px;width: 22%;border-radius: 4px;background-color: #fff;}
+.tnbTxtname2{position: relative;left: 0;top: 0;margin: 0;border: 1px dashed #aaa;padding: 0;float: left;
+	height: 35px;width: 7%;border-radius: 4px;background-color: #fff;}
+.tnbInputtxt{position: relative;left: 0;top: 0;margin: 0;border: 1px solid #ccc;padding: 0;float: left;
+	height: 35px;width: 76.5%;border-radius: 4px;margin-left: 1.5%;padding-left: 10px;padding-right: 10px;}
+.tnbInputtxtLong{position: relative;left: 0;top: 0;margin: 0;border: 1px solid #ccc;padding: 10px;float: right;
+	height: 105px;width: 92.45%;border-radius: 4px;}
+.tnbOneline{position: relative;left: 0;top: 0;margin: 0;border: 0;padding: 0;margin:0;width: 97%;margin-left: 1.5%;height: 60px;}
+.tnbBt1{width:90px;height:35px;background-color:rgba(54,71,95,1);border-radius: 4px;}
+.tnbBt1:hover{cursor: pointer;}
+/*书籍修改*/
+.tbeRequestAnswer{position: absolute;top: 35px;right: 0;width:76.5%;background-color: #fff;overflow: hidden;
+	border: 1px solid #aaa;display: none;z-index: 602;}
+/*章节新增组件*/
+.tctSelectBook{position: relative;float: left;width: 47.75%;height: 35px;z-index:600;margin-top:15px;margin-left: 1.5%;}
+.tctsbTxt{position: relative;float: left;width: 28.5%;height: 35px;border:1px dashed #ccc;border-radius: 4px;background-color: #fff;}
+.tctsbInput{position: relative;float: right;width: 70%;height: 35px;border:1px solid #ccc;border-radius: 4px;padding-left:5px;padding-right:5px;}
+.tctRequestAnswer{position: absolute;top: 35px;right: 0;width: 70%;background-color: #fff;overflow: hidden;
+	border: 1px solid #aaa;display: none;z-index: 602;}
+.tctRaItem{position: relative;width: 100%;height: 35px;}
+.tctRaItem2{border-top: 1px solid #eee;}
+.tctRaItem2:hover{cursor: pointer;background-color: #eee;}
+.tctRaIname{position: relative;float: left;width: 60%;height: 100%;}
+.tctRaIauthor{position: relative;float: right;width: 40%;height: 100%;}
+.tctINfoDisplay{position: relative;float: left;width: 23.125%;height: 35px;z-index: 600;margin-top: 15px;margin-left: 1.5%;}
+.tctinfodTxt{position: relative;float: left;width: 21.6215%;height: 35px;border:1px dashed #ccc;border-radius: 4px;background-color: #fff;}
+.tctinfodInfo{position: relative;float: right;width: 77.105%;height: 35px;border:1px solid #ccc;border-radius: 4px;background-color: #fff;}
+.tctChapterInput{position: relative;margin: 0;padding:10px;float: left;width: 97%;height: 50%;z-index: 599;margin-top: 15px;margin-left: 1.5%;
+	border:1px solid #ccc;border-radius: 4px;}
+.tctChapterInputname{position: relative;margin: 0;float: left;width: 17.85%;height: 35px;z-index: 599;margin-top: 15px;margin-left: 0.275%;
+	border:1px solid #ccc;border-radius: 4px;padding-left: 5px;padding-right: 5px;}
+.tctTxtTitle{position: relative;float: left;width: 5%;height: 35px;z-index: 599;margin-top: 15px;margin-left: 1.5%;
+	border:1px dashed #ccc;border-radius: 4px;background-color: #fff;}

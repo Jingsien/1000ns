@@ -207,11 +207,14 @@ return [
         // SESSION_ID的提交变量,解决flash上传跨域
         'var_session_id' => '',
         // SESSION 前缀
-        'prefix'         => 'think',
+        'prefix'         => 'qnsgw',
         // 驱动方式 支持redis memcache memcached
         'type'           => '',
         // 是否自动开启 SESSION
         'auto_start'     => true,
+        //表示session保存在自己网站根目录中的runtime目录中  'path'=>TEMP_PATH,
+        //过期时间 7天
+        'expire'=> 3600*24*7,
     ],
 
     // +----------------------------------------------------------------------

@@ -6,11 +6,11 @@
 	<!-- 引入页面样式文件 -->
 	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/com.css">
 	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/msg.css">
-	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/index/css/appSearchInfo.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/css/appSearchInfo.css">
 	<!-- 引入VUE -->
 	<script type="text/javascript" src="__ROOT__/static/common/js/vue-v2.6.10/vue.js"></script>
 	<!-- 引入自定义VUE组件 -->
-	<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.component.js"></script>
+	<!-- <script type="text/javascript" src="__ROOT__/static/index/index/js/vue.component.js"></script> -->
 	<!-- 表单提交相关js -->
 	<script src="__ROOT__/static/common/js/axios-v0.12.0-min.js"></script>
 	<script src="__ROOT__/static/common/js/lodash-v4.13.1-min.js"></script>
@@ -70,16 +70,41 @@
 						<div class="asimmmllDetails centerDiplay"><span class="fontSizeMyself7">加入书架</span></div>
 						<div v-on:click="detailsButton( bookItem )" class="asimmmllBookshelf centerDiplay"><span class="fontSizeMyself7">查看详情</span></div>
 					</div>
+					<div class="asimmmlListImg" v-bind:style="{display: noSearchOn}">
+						<div style="width:100%;height:100%;" class="centerDiplay">
+							<div style="width:112px;height:100px;">
+								<img src="__ROOT__/static/common/img/noSearch.png" style="width:112px;height:80px;">
+								<div style="width:112px;height:20px;" class="centerDiplay"><span class="fontSizeMyself5">未找到记录</span></div>
+							</div>
+						</div>
+					</div>
 					<!-- 结果集展示-翻页 -->
-					<div class="asimmmlBottom"></div>
+					<div class="asimmmlBottom" v-bind:class="{ activeDisplay_on: isDis_on, activeDisplay_no: isDis_no, }">分页-待开发</div>
+					<div class="asimmmlbMore centerDiplay-sc"  v-bind:class="{ activeDisplay_on: isDis_no, activeDisplay_no: isDis_on, }"><span class="fontSizeMyselfc">&nbsp;精彩推荐&nbsp;·&nbsp;</span><span class="fontSizeMyself1">扩展阅读</span></div>
+					<!-- 结果集展示-推荐 -->
+					<div v-for="bookItem in bookInfos_r" class="asimmmlList" style="background-color:#fff;">
+						<img class="asimmmllImg" v-bind:src="'__ROOT__/static/bookList/'+bookItem.book_id+'/i1.jpg'">
+						<div class="asimmmllName centerDiplay-st"><span class="fontSizeMyself6">{{bookItem.book_name}}</span></div>
+						<div class="asimmmllRcont centerDiplay-et"><span class="fontSizeMyself3">{{bookItem.read_num}}次阅读</span></div>
+						<div class="asimmmllAuthor centerDiplay-st"><span class="fontSizeMyself4">作者：{{bookItem.book_author}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;上传：{{bookItem.up}}</span></div>
+						<div class="asimmmllRecommend centerDiplay-et"><span class="fontSizeMyself4">{{bookItem.recommend_num}}次推荐</span></div>
+						<div class="asimmmllBrief centerDiplay-st"><span class="fontSizeMyself5 overflow-c1">{{bookItem.brief}}</span></div>
+						<div class="asimmmllDown"><span class="fontSizeMyself3">下载</span></div>
+						<div class="asimmmllDetails centerDiplay"><span class="fontSizeMyself7">加入书架</span></div>
+						<div v-on:click="detailsButton(bookItem)" class="asimmmllBookshelf centerDiplay"><span class="fontSizeMyself7">查看详情</span></div>
+					</div>
 				</div>
 				<!-- 右侧 -->
-				<div class="asimmmRight centerDiplay">推荐区域</div>
+				<div class="asimmmRight centerDiplay">
+					<div style="width:100%;border:1px solid #ddd;border-radius: 4px;overflow:hidden;" class="borderBnone"><img style="width:100%;" src="__ROOT__/static/common/img/qnsgwQQ.png"></div>
+				</div>
 			</div>
 		</div>
 		<!-- 底部导航 -->
-		<div class="asimBottom">
-			bottom
+		<div class="asimBottom centerDiplay">
+			<div class="asimbCenter centerDiplay">
+				<span>联系我们: enqiangjing@163.com</span>
+			</div>
 		</div>
 	</div>
 	<!-- 弹窗页面 -->
@@ -89,5 +114,5 @@
 </div>
 </body>
 <!-- 在页面加载完成之后，引入VUE实例文件 -->
-<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.appSearchInfo.js"></script>
+<script type="text/javascript" src="__ROOT__/static/index/js/vue.appSearchInfo.js"></script>
 </html>

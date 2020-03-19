@@ -1,0 +1,33 @@
+#appIndex{ /*页面最外层样式*/position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 100%;height: 100%;}
+#appIndexMain{ /*主体画板*/position: absolute;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 100%;height: 100%;z-index: 600;}
+.aim-c1{ /*通用样式1*/position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 100%;}
+#aimTop{ /*顶部导航*/height: 10%;background: rgba(255, 255, 255, 0.45);}
+#aimMiddle{ /*中间区域内容*/height: 80%;}
+#aimBottom{ /*底部导航*/height: 10%;background-color: rgba(0, 0, 0, 0.65);}
+#aimmOut{position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 80%;min-width: 980px;height: 100%;}
+#aimmoTop{position: relative;top: 0; left: 10%; margin: 0; border: 0; padding: 0;width: 80%;height: 30%;}
+#aimmoTop img{width: 128px;height: 75px;}
+#aimmoMiddle{position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 100%;height: 20%;}
+#aimmomSearch{position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 80.75%;height: 50%;}
+#aimmomsInput{position: relative;float: left;top: 0; left: 0; margin: 0; border: 2px solid #eee; padding: 0 10px 0 10px;
+	width: 80%;height: 100%;border-radius: 10px;outline: none; /* 去除选中状态边框 */}
+#aimmomsButton{position: relative;float: right;top: 0; left: 0; margin: 0; border: solid 2px #0076a3; padding: 0;
+	width: 18.5%;height: 100%;background-color: #0078a5;border-radius: 10px;}
+#aimmomsButton:hover{cursor: pointer;background-color: #0095cd;}
+#aimmoBottom{position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 100%;height: 50%;}
+#aimmobDisplay{position: relative;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 80%;height: 70%;}
+#aimmobLeft{position: relative;float: left;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 82.5%;height: 100%;}
+#aimmobRight{position: relative;float: right;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 16.5%;height: 100%;}
+#aimmobrm{position: relative;float: right;top: 0; left: 0; margin: 0; border: 0; padding: 0;width: 50px;text-align: center;
+	height: 50px;line-height: 50px;background-color: #ddd;border-radius: 15px 0;}
+.aimmoblItem{position: relative;float: left;top: 0; left: 0; margin: 0; border: 0; padding: 0;
+	margin-right: 2%;width: 23%;height: 100%;border-radius: 2px;}
+.reBookName{position: absolute;top: 15px; right: 10px;}
+.reBookAuthorName{position: absolute;bottom: 15px; right: 10px;width: 16px;line-height: 15px;}
+.logo-p1{/*logo位置*/position: relative;float: left;top: 0; left: 10%; margin: 0; border: 0; padding: 0;height: 100%;width: 30%;}
+.logo-t1{/*导航条右侧文字*/position: relative;float: right;top: 0; right: 10%; margin: 0; border: 0; padding: 0;height: 100%;width: 6.5%;}
+.logo-t1-c1{width: 90%;height: 50%;background-color: #fff;border-radius: 5px;}
+.aimmotBookborder{position: relative;width: 25%;height: 30px;border: 0;border-radius: 2px;background-color: rgba(0,0,0, 0.85);box-shadow: 0 0 5px #666;}
+.aimmotBookborderInside{
+	position: relative;width: 60%;height: 30px;background-color: rgba(255,255,255, 0.85);border-radius: 2px;box-shadow: 0 0 5px #aaa;}
+.aimmoTop-c1{position: relative;float: left;left: 0%;width: 27.75%;height: 60%;}

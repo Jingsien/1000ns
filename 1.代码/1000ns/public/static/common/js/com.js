@@ -42,6 +42,18 @@ function txt_read (div_id, url_id) { // 文本文件读取 div_id显示文本的
 	});
 }
 
+async function txt_read_str (url_id) { // 文本文件读取 div_id显示文本的标签，url_id文本文件Url
+	var dataReturn = null; // 中间变量用于存储匿名函数的返回值
+	await $.ajax({
+		type: "POST",
+		url: url_id,
+		success: function(msg){
+			dataReturn = msg;
+		}
+	});
+	return dataReturn;
+}
+
 async function axios_post_data (urlNum,dataNum) { // url+参数，异步查询结果值封装
 	var dataReturn = null; // 中间变量用于存储匿名函数的返回值
 	await axios.post(urlNum, { // await执行完毕后，执行后续代码
@@ -70,9 +82,13 @@ function get_root_url ( type ) { // 地址返回函数
     var wwwLate = urlPath.indexOf(pathName); //主机地址后第一位所处位置，如21
     var localhostPaht = urlPath.substring(0, wwwLate); //获取主机地址，如：http://localhost:8010
     var mName = pathName.substring(0, pathName.substr(0).indexOf('index.php')+16); //获取index模块路径
+    var iName = pathName.substring(0, pathName.substr(0).indexOf('index.php')+10); //获取index模块路径
     var pName = pathName.substring(0, pathName.substr(0).indexOf('public/')) + "public/static/"; //获取static目录
     if ( type == "1" ) {
     	return (localhostPaht + mName); //type=1,返回index目录
     }
-    return (localhostPaht + pName); //返回static目录
+    if ( type == "6" ) {
+    	return (localhostPaht + iName); //type=6,返回index.php
+    }
+    return (localhostPaht + pName); //返回static目录 type=2
 }

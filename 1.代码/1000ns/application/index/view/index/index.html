@@ -6,11 +6,11 @@
 	<!-- 引入页面样式文件 -->
 	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/com.css">
 	<link rel="stylesheet" type="text/css" href="__ROOT__/static/common/css/msg.css">
-	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/index/css/appIndex.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/static/index/css/appIndex.css">
 	<!-- 引入VUE -->
 	<script type="text/javascript" src="__ROOT__/static/common/js/vue-v2.6.10/vue.js"></script>
 	<!-- 引入自定义VUE组件 -->
-	<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.component.js"></script>
+	<!-- <script type="text/javascript" src="__ROOT__/static/index/js/vue.component.js"></script> -->
 	<!-- 表单提交相关js -->
 	<script src="__ROOT__/static/common/js/axios-v0.12.0-min.js"></script>
 	<script src="__ROOT__/static/common/js/lodash-v4.13.1-min.js"></script>
@@ -18,6 +18,9 @@
 	<script src="__ROOT__/static/common/js/jquery-v1.12.4/jquery.js"></script>
 	<!-- 通用 JS -->
 	<script src="__ROOT__/static/common/js/com.js"></script>
+	<script type="text/javascript">
+		var userIfo = {$userIfo};
+	</script>
 </head>
 <body>
 <!-- 页面区域 -->
@@ -28,7 +31,19 @@
 		<div class="aim-c1" id="aimTop">
 			<!-- logo显示 -->
 			<div class="logo-p1 centerDiplay-sc">
-				<img class="logo-c1" src="__ROOT__/static/common/img/1000nsLogo.png"  alt="Logo" />
+				<img class="logo-c1" src="__ROOT__/static/common/img/1000nsLogo.png" alt="Logo"/>
+			</div>
+			<!-- 显示用户信息：可作为公共代码-导出为组件 -->
+			<div class="user_info_img centerDiplay-ec">
+				<img v-bind:src="'__ROOT__/static/common/img/userListImg/'+userIfos.user_img" class="">
+				<div class="user_info_img_div centerDiplay" v-on:click="loginCommitIndex" @mouseenter="ueronYesList" @mouseleave="ueronYesListNo">
+					<span class="fontSizeMyself1a userNameTxt">{{userIfos.simple_name}}</span>
+					<div class="loginAllerdySelected" v-if="ueronYes">
+						<div class="loginAllerdySelectedItem centerDiplay borderBnone"><span class="fontSizeMyself3a" v-on:click="userCenter">用户中心</span></div>
+						<div class="loginAllerdySelectedItem centerDiplay borderBnone"><span class="fontSizeMyself3a">我的书架</span></div>
+						<div class="loginAllerdySelectedItem centerDiplay" style="border:0;" v-on:click="loginOut"><span class="fontSizeMyself3a">退出登录</span></div>
+					</div>
+				</div>
 			</div>
 			<div class="logo-t1 centerDiplay"><div class="logo-t1-c1 centerDiplay"><span class="fontSizeMyself1">意见</span></div></div>
 			<div class="logo-t1 centerDiplay"><div class="logo-t1-c1 centerDiplay"><span class="fontSizeMyself1">纠错</span></div></div>
@@ -74,7 +89,9 @@
 		弹窗区域
 	</div>
 </div>
+<!-- 在页面加载完成之后，引入VUE实例文件   type="text/babel" -->
+<script src="__ROOT__/static/index/js/vue.appIndex.js"></script>
+<!-- 通用 JS -->
+<!-- <script src="__ROOT__/static/common/js/browser.min.js"></script> -->
 </body>
-<!-- 在页面加载完成之后，引入VUE实例文件 -->
-<script type="text/javascript" src="__ROOT__/static/index/index/js/vue.appIndex.js"></script>
-</html
+</html>
